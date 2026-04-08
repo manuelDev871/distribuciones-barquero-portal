@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.proyectointermodulardistribucionesbarquero.controller.PedidoController"
+      prefWidth="700" prefHeight="450"
+      style="-fx-padding: 20; -fx-background-color: #f4f6f7;">
+
+    <!-- 🔹 TÍTULO -->
+    <Label text="Gestión de Pedidos"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+    <!-- 🔹 SECCIÓN SUPERIOR -->
+    <HBox spacing="15">
+
+        <VBox spacing="5">
+            <Label text="Cliente"/>
+            <ComboBox fx:id="cbCliente" prefWidth="200"/>
+        </VBox>
+
+        <VBox spacing="5">
+            <Label text="Producto"/>
+            <ComboBox fx:id="cbProducto" prefWidth="200"/>
+        </VBox>
+
+        <VBox spacing="5">
+            <Label text="Cantidad"/>
+            <TextField fx:id="txtCantidad" prefWidth="80"/>
+        </VBox>
+
+        <VBox alignment="BOTTOM_CENTER">
+            <Button text="➕ Añadir"
+                    onAction="#anadirProducto"
+                    style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-background-radius: 8;"/>
+        </VBox>
+
+    </HBox>
+
+    <!-- 🔹 TABLA CARRITO -->
+    <TableView fx:id="tablaDetalle" prefHeight="250">
+
+        <columns>
+            <TableColumn fx:id="colProducto" text="Producto" prefWidth="250"/>
+            <TableColumn fx:id="colCantidad" text="Cantidad" prefWidth="100"/>
+            <TableColumn fx:id="colPrecio" text="Precio" prefWidth="150"/>
+        </columns>
+
+    </TableView>
+
+    <!-- 🔹 BOTÓN FINAL -->
+    <HBox alignment="CENTER_RIGHT">
+        <Button text="🧾 Crear Pedido"
+                onAction="#crearPedido"
+                style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-background-radius: 8;"/>
+    </HBox>
+
+    <HBox alignment="TOP_RIGHT" spacing="10">
+        <Label text="Total:" style="-fx-font-size: 14px;"/>
+        <Label fx:id="lblTotal" text="0.00€"
+               style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+    </HBox>
+
+</VBox>

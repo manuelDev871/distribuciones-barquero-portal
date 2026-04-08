@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" alignment="CENTER"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.proyectointermodulardistribucionesbarquero.controller.FormClienteController"
+      prefWidth="400" prefHeight="400"
+      style="-fx-padding: 25; -fx-background-color: #f4f6f7;">
+
+    <!-- 🔹 TÍTULO -->
+    <Label text="👤 Cliente"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+    <!-- 🔹 FORMULARIO -->
+    <VBox spacing="10" alignment="CENTER_LEFT">
+
+        <Label text="Nombre"/>
+        <TextField fx:id="txtNombre" promptText="Introduce el nombre" prefWidth="300"/>
+
+        <Label text="Email"/>
+        <TextField fx:id="txtEmail" promptText="ejemplo@email.com" prefWidth="300"/>
+
+        <Label text="Teléfono"/>
+        <TextField fx:id="txtTelefono" promptText="600123456" prefWidth="300"/>
+
+        <Label text="Dirección"/>
+        <TextField fx:id="txtDireccion" promptText="Calle, número..." prefWidth="300"/>
+
+    </VBox>
+
+    <!-- 🔹 BOTONES -->
+    <HBox spacing="15" alignment="CENTER">
+
+        <Button text="💾 Guardar"
+                onAction="#guardarCliente"
+                style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-background-radius: 8;"/>
+
+        <Button text="❌ Cancelar"
+                onAction="#cerrarVentana"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 8;"/>
+
+    </HBox>
+
+</VBox>

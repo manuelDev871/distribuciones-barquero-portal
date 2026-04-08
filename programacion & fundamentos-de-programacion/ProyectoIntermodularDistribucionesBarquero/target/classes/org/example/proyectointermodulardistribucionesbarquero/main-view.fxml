@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.proyectointermodulardistribucionesbarquero.controller.MainController"
+            prefWidth="900" prefHeight="550"
+            style="-fx-background-color: #f4f6f7;">
+
+    <!-- 🔹 HEADER -->
+    <top>
+        <VBox spacing="10" style="-fx-padding: 15;">
+
+            <Label fx:id="lblTitulo"
+                   text="Gestión"
+                   style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+            <!-- BOTONES PRINCIPALES -->
+            <HBox spacing="10">
+                <Button text="👤 Clientes"
+                        onAction="#mostrarClientes"
+                        style="-fx-background-color: #2c3e50; -fx-text-fill: white; -fx-background-radius: 8;"/>
+
+                <Button text="📦 Productos"
+                        onAction="#mostrarProductos"
+                        style="-fx-background-color: #2c3e50; -fx-text-fill: white; -fx-background-radius: 8;"/>
+
+                <Button text="🛒 Pedidos"
+                        onAction="#abrirPedidos"
+                        style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-background-radius: 8;"/>
+            </HBox>
+
+        </VBox>
+    </top>
+
+    <!-- 🔹 TABLA -->
+    <center>
+        <VBox style="-fx-padding: 10;">
+            <TableView fx:id="tablaClientes" prefHeight="400">
+
+                <columns>
+                    <TableColumn fx:id="colNombre" text="Nombre" prefWidth="180"/>
+                    <TableColumn fx:id="colEmail" text="Email" prefWidth="220"/>
+                    <TableColumn fx:id="colTelefono" text="Teléfono" prefWidth="140"/>
+                    <TableColumn fx:id="colDireccion" text="Dirección" prefWidth="220"/>
+                </columns>
+
+            </TableView>
+        </VBox>
+    </center>
+
+    <!-- 🔹 ACCIONES -->
+    <bottom>
+        <HBox spacing="15"
+              alignment="CENTER_RIGHT"
+              style="-fx-padding: 15;">
+
+            <Button text="➕ Añadir"
+                    onAction="#anhadir"
+                    style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-background-radius: 8;"/>
+
+            <Button text="✏️ Editar"
+                    onAction="#editar"
+                    style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-background-radius: 8;"/>
+
+            <Button text="❌ Eliminar"
+                    onAction="#eliminar"
+                    style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 8;"/>
+
+        </HBox>
+    </bottom>
+
+</BorderPane>

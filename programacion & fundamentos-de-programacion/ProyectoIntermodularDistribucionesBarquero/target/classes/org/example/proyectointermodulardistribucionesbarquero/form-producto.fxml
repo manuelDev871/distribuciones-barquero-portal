@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" alignment="CENTER"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.proyectointermodulardistribucionesbarquero.controller.FormProductoController"
+      prefWidth="420" prefHeight="450"
+      style="-fx-padding: 25; -fx-background-color: #f4f6f7;">
+
+    <!-- 🔹 TÍTULO -->
+    <Label text="📦 Producto"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+    <!-- 🔹 FORMULARIO -->
+    <VBox spacing="10" alignment="CENTER_LEFT">
+
+        <Label text="Nombre"/>
+        <TextField fx:id="txtNombre" promptText="Nombre del producto" prefWidth="300"/>
+
+        <Label text="Precio (€)"/>
+        <TextField fx:id="txtPrecio" promptText="0.00" prefWidth="300"/>
+
+        <Label text="Stock"/>
+        <TextField fx:id="txtStock" promptText="Cantidad disponible" prefWidth="300"/>
+
+        <Label text="Categoría"/>
+        <ComboBox fx:id="cbCategoria" promptText="Seleccionar categoría" prefWidth="300"/>
+
+        <Label text="Proveedor"/>
+        <ComboBox fx:id="cbProveedor" promptText="Seleccionar proveedor" prefWidth="300"/>
+
+    </VBox>
+
+    <!-- 🔹 BOTONES -->
+    <HBox spacing="15" alignment="CENTER">
+
+        <Button text="💾 Guardar"
+                onAction="#guardarProducto"
+                style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-background-radius: 8;"/>
+
+        <Button text="❌ Cancelar"
+                onAction="#cerrarVentana"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 8;"/>
+
+    </HBox>
+
+</VBox>
