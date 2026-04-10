@@ -40,17 +40,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    const sectionExperiencias = document.querySelector('.experiencias');
+    const sectionProductos = document.querySelector('.productos');
 
-    if (sectionExperiencias) {
+    if (sectionProductos) {
 
-        const observerExperiencias = new IntersectionObserver((entries) => {
+        const observerProductos = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
 
-                    const left = sectionExperiencias.querySelector('.card-left');
-                    const center = sectionExperiencias.querySelector('.card-center');
-                    const right = sectionExperiencias.querySelector('.card-right');
+                    const left = sectionProductos.querySelector('.card-left');
+                    const center = sectionProductos.querySelector('.card-center');
+                    const right = sectionProductos.querySelector('.card-right');
 
                     center.classList.add('show');
 
@@ -59,33 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         right.classList.add('show');
                     }, 400);
 
-                    observerExperiencias.unobserve(entry.target);
+                    observerProductos.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.5 });
 
-        observerExperiencias.observe(sectionExperiencias);
+        observerProductos.observe(sectionProductos);
     }
-
-
-
-    /* ========================= Animacion cards seccion DESTINOS ========================= */
-    
-    
-    
-    const destinoCards = document.querySelectorAll('.destino-card');
-
-    const observerDestinos = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.classList.add('show');
-                }, 400);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    destinoCards.forEach(card => observerDestinos.observe(card));
 
 
 
@@ -107,7 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
     steps.forEach(step => observerSteps.observe(step));
 
 
+
     /* ========================= Animacion cards y mapa seccion UBICACIÓN  ========================= */
+
+
+    
     const ubicacionSection = document.querySelector('.ubicacion');
 
     if (ubicacionSection) {

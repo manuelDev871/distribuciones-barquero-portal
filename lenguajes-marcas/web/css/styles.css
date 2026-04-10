@@ -124,8 +124,8 @@ h1, h2, h3 {
     height: 100vh;
 
     background: 
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
-        url("imagenes/Hero.png") center/cover no-repeat;
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.6)),
+        url("img/Hero.png") center/cover no-repeat;
 
     background-position: center 30%;
     display: flex;
@@ -154,19 +154,19 @@ h1, h2, h3 {
     color: #ffffff;
 
     text-shadow: 
-        0 10px 40px rgba(0,0,0,0.3),
-        0 5px 20px rgba(0,0,0,0.2);
+        0 5px 20px rgba(0,0,0,0.6);
 
     line-height: 1.1;
     margin-bottom: 30px;
 }
 
 .hero-content p {
-    color: rgba(255,255,255,0.9);
-    font-size: 1.3rem;
+    color: #ffffff;
 
     text-shadow: 
-        0 5px 25px rgba(0,0,0,0.8);
+        0 4px 15px rgba(0,0,0,0.7);
+
+    font-size: 1.3rem;
 }
 
 .hero::before {
@@ -176,9 +176,9 @@ h1, h2, h3 {
 
     background: linear-gradient(
         to right,
-        rgba(0,0,0,0.75) 0%,
-        rgba(0,0,0,0.6) 35%,
-        rgba(0,0,0,0.2) 60%,
+        rgba(0,0,0,0.65) 0%,
+        rgba(0,0,0,0.45) 35%,
+        rgba(0,0,0,0.15) 60%,
         rgba(0,0,0,0.0) 100%
     );
 
@@ -215,7 +215,7 @@ h1, h2, h3 {
     text-decoration: none;
     letter-spacing: 0.5px;
 
-    background: #d4af37; /* dorado elegante */
+    background: #d4af37;
     color: black;
     font-weight: 600;
 
@@ -271,11 +271,11 @@ h1, h2, h3 {
 
     background: repeating-linear-gradient(
         90deg,
-        var(--color-dark) 0px,
-        var(--color-dark) 26px,
+        #0f172a 0px,  
+        #0f172a 26px,
 
-        #cbb27a 26px,
-        #cbb27a 52px
+        #1e3a8a 26px,
+        #1e3a8a 52px
     );
 }
 
@@ -292,25 +292,43 @@ h1, h2, h3 {
 
 
 
-/* ================= FRANJA GRADIENTE MARRON - VERDE ================= */
+/* ================= FRANJA GRADIENTE AZUL OSCURO - AZUL CLARO ================= */
 
 
 
 .info-bar {
     background: linear-gradient(
         180deg,
-        var(--color-dark-alt),
-        var(--color-green-dark)
+        #0f172a,   
+        #1e3a8a   
     );
-    padding: 50px 0;
+    
+    color: white;
+    padding: 40px 60px;
 }
 
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    align-items: center;
+.info-bar {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 30px;
 }
+
+.info-item {
+    flex: 1;
+}
+
+.info-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.info-item p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
 
 .info-item {
     display: flex;
@@ -338,22 +356,6 @@ h1, h2, h3 {
     background: rgba(255,255,255,0.2);
 }
 
-.info-item h4 {
-    font-size: 1.4rem;
-    margin-bottom: 6px;
-    line-height: 1.2;
-    letter-spacing: 2px;
-}
-
-.info-item p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    margin: 0;
-    line-height: 1.4;
-    letter-spacing: 1px;
-}
-
-
 
 /* ================= LINEA DIVISORIA ================= */
 
@@ -366,35 +368,29 @@ h1, h2, h3 {
 
     background: repeating-linear-gradient(
         90deg,
-        var(--color-dark) 0px,
-        var(--color-dark) 26px,
+        #132238 0px,  
+        #132238 26px,
 
-        #cbb27a 26px,
-        #cbb27a 52px
+        #1e3a8a 26px, 
+        #1e3a8a 52px
     );
 }
 
 
 
-/* ================= SECCION EXPERIENCIAS ================= */
+/* ================= SECCION PRODUCTOS ================= */
 
 
 
-.experiencias {
+.productos {
     padding: 50px 0;
 
-        background: 
-        radial-gradient(
-            circle at center,
-            rgba(255,255,255,0.88) 0%,
-            rgba(255,255,255,0.75) 30%,
-            rgba(255,255,255,0.25) 60%,
-            rgba(255,255,255,0.05) 80%,
-            rgba(255,255,255,0) 100%
-        ),
+        
+    background: 
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+        url("img/BackgroundProductos.png") center/cover no-repeat;
 
-        url("img/BackgroundExperiencias.png") center/cover no-repeat;
-
+    backdrop-filter: blur(2px);
     position: relative;
 }
 
@@ -411,9 +407,10 @@ h1, h2, h3 {
     font-size: 2.1rem;
     line-height: 1.3;
     letter-spacing: 0.5px;
+    color: white;
 }
 
-.experiencias .section-title span {
+.productos .section-title span {
     color: var(--color-primary);
     font-weight: 600;
 }
@@ -479,13 +476,13 @@ h1, h2, h3 {
     letter-spacing: 0.5px;
 }
 
-.price {
+.info {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 15px;
 }
 
-.price small {
+.info small {
     font-size: 0.8rem;
     opacity: 0.7;
     margin-right: 5px;
@@ -581,194 +578,11 @@ h1, h2, h3 {
 
 
 
-/* ================= SECCION DESTINOS ================= */
 
 
 
-.section-title-destinos {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 30px auto;
-    font-size: 1.9rem;
-    line-height: 1.3;
-    letter-spacing: 0.5px;
-    color: black;
-}
 
-.destinos .section-title-destinos span {
-    color: var(--color-primary);
-    font-weight: 600;
-}
-
-.destinos {
-    padding: 60px 0;
-
-    background: 
-    radial-gradient(
-        circle at center,
-        rgba(255,255,255,0.9) 0%,
-        rgba(255,255,255,0.75) 30%,
-        rgba(255,255,255,0.55) 60%,
-        rgba(255,255,255,0.15) 80%,
-        rgba(255,255,255,0) 100%
-    ),
-    url("img/Destinos.png") center/cover no-repeat;
-
-    position: relative;
-}
-
-.destinos-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    max-width: 1800px;
-    margin: 60px auto 0;
-}
-
-.destino-card {
-    position: relative;
-    height: 260px;
-    border-radius: 20px;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.destino-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.destino-overlay {
-    position: absolute;
-    inset: 0;
-    padding: 30px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.85),
-        rgba(0,0,0,0.4),
-        transparent
-    );
-    
-    transition: 0.5s ease;
-}
-
-.destino-overlay .btn-card {
-    align-self: flex-end;
-    
-    transition: all 0.3s ease;
-}
-
-.destino-overlay h3 {
-    font-size: 1.8rem;
-    margin-bottom: 5px;
-    letter-spacing: 1px;
-}
-
-.destino-overlay p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-    margin-bottom: 10px;
-    letter-spacing: 0.5px;
-}
-
-.precio {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.destino-overlay h3,
-.destino-overlay p,
-.destino-overlay .price {
-    color: white;
-}
-
-.destino-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
-}
-
-.destino-card:hover img {
-    transform: scale(1.1);
-}
-
-.destino-card:hover .destino-overlay {
-    background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.95),
-        rgba(0,0,0,0.6),
-        transparent
-    );
-}
-
-.destino-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background: linear-gradient(
-        120deg,
-        transparent 30%,
-        rgba(255,255,255,0.2),
-        transparent 70%
-    );
-
-    opacity: 0;
-    transition: 0.5s;
-}
-
-.destino-card:hover::after {
-    opacity: 1;
-}
-
-.destino-card:hover .btn-card {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-}
-
-/* Animacion de titulos */
-.section-title,
-.section-title-destinos {
-    opacity: 0;
-    transform: translateY(-40px);
-    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.section-title.show,
-.section-title-destinos.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Animacion scroll destinos */
-.destino-card {
-    opacity: 0;
-    transform: translateY(60px) scale(0.95);
-    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.destino-card.show {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-
-.destino-card:nth-child(1).show { transition-delay: 0.2s; }
-.destino-card:nth-child(2).show { transition-delay: 0.4s; }
-.destino-card:nth-child(3).show { transition-delay: 0.6s; }
-.destino-card:nth-child(4).show { transition-delay: 0.8s; }
-
-
-
-/* ================= SECCION INSTRUCCIONES ================= */
+/* ================= SECCION INSTRUCCIONES / EMPRESA ================= */
 
 
 
@@ -776,16 +590,8 @@ h1, h2, h3 {
     padding: 60px 0;
 
     background: 
-    radial-gradient(
-        circle at center,
-        rgba(255,255,255,0.3) 0%,
-        rgba(255,255,255,0.2) 30%,
-        rgba(255,255,255,0.2) 60%,
-        rgba(255,255,255,0.02) 80%,
-        rgba(255,255,255,0) 100%
-    ),
-        url("img/InstruccionesSeccion.png") left center / cover no-repeat;
-        background-position: left 20% center;
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+        url("img/BackgroundEmpresa.png") center/cover no-repeat;
 
     position: relative;
 }
@@ -873,11 +679,11 @@ h1, h2, h3 {
 
 .step-content {
     position: relative;
-    background: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(14px);
     padding: 30px 35px;
     border-radius: 18px;
-    border: 1px solid rgba(255,255,255,0.35);
+    border: 1px solid rgba(255,255,255,0.3);
     box-shadow: 
         0 10px 30px rgba(0,0,0,0.08),
         inset 0 1px 0 rgba(255,255,255,0.5);
@@ -927,15 +733,12 @@ h1, h2, h3 {
     padding: 60px 0;
 
     background: 
-        radial-gradient(
-            circle at center,
-            rgba(255,255,255,0.75) 0%,
-            rgba(255,255,255,0.45) 30%,
-            rgba(255,255,255,0.35) 60%,
-            rgba(255,255,255,0.10) 80%,
-            rgba(255,255,255,0) 100%
-        ),
-        url("img/BackgroundUbicacion.png") top/cover no-repeat;
+        linear-gradient(to bottom,
+    rgba(0,0,0,0.85) 0%,
+    rgba(0,0,0,0.7) 40%,
+    rgba(0,0,0,0.5) 100%
+),
+        url("img/BackgroundUbicacion.png") center 100%/cover no-repeat;
 
     position: relative;
 }
@@ -949,6 +752,7 @@ h1, h2, h3 {
     opacity: 0;
     transform: translateY(-30px);
     transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+    color: white;
 }
 
 .section-subtitle.show {
@@ -1027,7 +831,9 @@ h1, h2, h3 {
             rgba(0,0,0,0.25),
             rgba(0,0,0,0.4)
         ),
-        url("img/mapa.png") no-repeat;
+        url("img/mapa.jpg") no-repeat;
+
+    box-shadow: 0 25px 70px rgba(0,0,0,0.5);
 
     background-size: cover;
     background-position: 60% center;
@@ -1040,6 +846,14 @@ h1, h2, h3 {
     transition:
         opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
         transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mapa-pro::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+    border-radius: 20px;
 }
 
 .mapa-pro.show {
@@ -1087,14 +901,12 @@ h1, h2, h3 {
     padding: 60px 0;
 
     background:
-        radial-gradient(
-            circle at center,
-            rgba(255,255,255,0.9) 0%,
-            rgba(255,255,255,0.3) 40%,
-            rgba(255,255,255,0.1) 70%,
-            rgba(255,255,255,0) 100%
-        ),
-        url("img/BackgroundFormulario.png") center/cover no-repeat;
+        linear-gradient(to bottom,
+        rgba(0,0,0,0.85) 0%,
+        rgba(0,0,0,0.7) 40%,
+        rgba(0,0,0,0.5) 100%
+    ),
+    url("img/BackgroundForm.jpg") center/cover no-repeat;
 
     position: relative;
 }
@@ -1208,8 +1020,8 @@ h1, h2, h3 {
 
     background: linear-gradient(
         180deg,
-        var(--color-green-dark),
-        var(--color-dark-alt)
+        #1e3a8a,
+        #0f172a    
     );
 
     color: rgba(255,255,255,0.85);
@@ -1353,11 +1165,11 @@ h1, h2, h3 {
 
     background: repeating-linear-gradient(
         90deg,
-        var(--color-dark) 0px,
-        var(--color-dark) 26px,
+        #0f172a 0px, 
+        #0f172a 26px,
 
-        #cbb27a 26px,
-        #cbb27a 52px
+        #1e3a8a 26px,
+        #1e3a8a 52px
     );
 }
 
@@ -1452,144 +1264,134 @@ h1, h2, h3 {
 
 
 
-/* ================= MOBILE RESPONSIVE ================= */
+/* ================= BASE FLUIDA ================= */
 
+img {
+    max-width: 100%;
+    height: auto;
+}
 
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* ================= HEADER MOBILE ================= */
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* ================= MOBILE (≤768px) ================= */
 
 @media (max-width: 768px) {
 
-    /* ================= BASE ================= */
-
-    .container {
-        padding: 0 16px;
-    }
-
-    body {
-        overflow-x: hidden;
-    }
-
-
-    /* ================= HEADER ================= */
-
+    /* ===== HEADER ===== */
     .header {
         height: 70px;
+        background: transparent;
     }
 
     .header-container {
-        padding: 0 16px;
+        padding: 0 20px;
     }
 
     .logo img {
-        height: 50px;
-        margin-top: 10px;
+        height: 55px;
+        margin-top: 0;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 
     .nav-list {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #0f172a;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 25px 0;
         display: none;
     }
 
-
-    /* ================= HERO ================= */
-
-
-
-    .hero {
-        height: auto;
-        padding: 70px 16px 20px;
-        min-height: 30vh;
+    .nav-list.active {
         display: flex;
-        align-items: center;
+    }
+
+    /* ===== HERO ===== */
+     .hero {
+        height: auto;
+        min-height: 80vh;
+        padding: 100px 20px 40px;
         justify-content: center;
+        text-align: center;
+        background: 
+            linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.6)),
+            url("img/HeroResponsive.png") center/cover no-repeat;
+
+        background-position: center 30%;
+    }
+
+    .hero-content {
+        margin-left: 0;
         text-align: center;
     }
 
     .hero-content h2 {
-        font-size: 1.2rem;
+        font-size: 2.2rem;
         line-height: 1.2;
-        margin-bottom: 8px;
-        margin-top: 25px;
     }
 
     .hero-content p {
-        font-size: 0.6rem;
-        margin-bottom: 12px;
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
     }
 
     .btn {
-        display: none;
+        display: inline-block;
+        width: 100%;
+        padding: 7px 0;
     }
-    /* ================= INFO BAR ================= */
 
-    .info-grid {
-        grid-template-columns: 1fr 1fr;
+    /* ===== INFO BAR ===== */
+    .info-bar {
+        flex-direction: column;
         gap: 20px;
+        padding: 30px 20px;
+        background: #1e3a8a;
     }
 
     .info-item::after {
         display: none;
     }
 
-    .info-item h4 {
-        font-size: 1.1rem;
-    }
-
-    .info-item p {
-        font-size: 0.8rem;
-    }
-
-
-    /* ================= EXPERIENCIAS ================= */
-
-    .section-title {
-        font-size: 1.6rem;
-    }
-
+    /* ===== PRODUCTOS ===== */
     .cards-container {
+        display: grid;
         grid-template-columns: 1fr;
+        justify-items: center;
         gap: 30px;
+        margin-top: 40px;
     }
 
     .card {
         width: 100%;
-        max-width: 100%;
+        max-width: 320px;
         height: 420px;
     }
 
-    .card-overlay h3 {
-        font-size: 1.5rem;
-    }
-
-    .card-overlay p {
-        font-size: 0.95rem;
-    }
-
-
-    /* ================= DESTINOS ================= */
-
-    .section-title-destinos {
-        font-size: 1.5rem;
-    }
-
-    .destinos-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .destino-card {
-        height: 220px;
-    }
-
-    .destino-overlay h3 {
-        font-size: 1.4rem;
-    }
-
-    .destino-overlay p {
-        font-size: 0.95rem;
-    }
-
-
-    /* ================= INSTRUCCIONES ================= */
-
+    /* ===== EMPRESA ===== */
     .story-step {
         flex-direction: column;
         gap: 15px;
@@ -1599,157 +1401,67 @@ h1, h2, h3 {
         display: none;
     }
 
-    .step-content {
-        padding: 20px;
-    }
-
-    .step-content h3 {
-        font-size: 1.3rem;
-    }
-
-    .step-content p {
-        font-size: 0.95rem;
-    }
-
-
-    /* ================= UBICACION ================= */
-
-    .section-subtitle {
-        font-size: 1.1rem;
-        padding: 0 10px;
-    }
-
+    /* ===== UBICACIÓN ===== */
     .ubicacion-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
     }
 
     .mapa-pro {
         height: 250px;
     }
 
-    .mapa-overlay h3 {
-        font-size: 1.2rem;
-    }
-
-    .mapa-overlay p {
-        font-size: 0.9rem;
-    }
-
-
-    /* ================= FORMULARIO ================= */
-
+    /* ===== FORM ===== */
     .form-row {
         flex-direction: column;
     }
 
-    .formulario-pro {
-        padding: 15px;
-    }
-
-    .formulario-pro input,
-    .formulario-pro textarea,
-    .formulario-pro select {
-        font-size: 0.9rem;
-    }
-
-
-    /* ================= FOOTER ================= */
-
+    /* ===== FOOTER ===== */
     .footer-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
         text-align: center;
-    }
-
-    .footer-social {
-        flex-direction: column;
-        gap: 10px;
     }
 
     .footer-bottom {
         flex-direction: column;
         gap: 10px;
-        text-align: center;
-    }
-
-    .footer-legal {
-        flex-direction: column;
-        gap: 8px;
     }
 
 }
 
 
+/* ================= TABLET (769px - 1024px) ================= */
 
-/* ================= TABLET RESPONSIVE (>=768px) ================= */
+@media (min-width: 769px) and (max-width: 1024px) {
 
-
-
-@media (min-width: 768px) and (max-width: 1024px) {
-
-    /* ================= HEADER ================= */
-
-    .header-container {
-        padding: 0 30px;
-    }
-
-    .nav-list {
-        gap: 25px;
-    }
-
-    .nav a {
-        font-size: 0.95rem;
-    }
-
-    /* ================= HERO ================= */
-
+    /* HERO */
     .hero {
-        background: 
-            linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.10)),
-            url("img/ImgHero-tablet.png") center/cover no-repeat;
-
         height: 100vh;
-        min-height: 80vh;
 
-        padding-top: 90px;
-        padding-bottom: 0;
+        background: 
+            linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.6)),
+            url("img/HeroResponsive.png") center/cover no-repeat;
 
+        background-position: center 30%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-top: 40px;
+        text-align: center;
+        color: white;
+
+        animation: zoomHero 3s ease-out forwards;
     }
 
     .hero-content h2 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
-    .hero-content p {
-        font-size: 1rem;
+    .hero-content {
+        margin-left: 0;
+        text-align: center;
     }
 
-    .hero-buttons {
-        gap: 15px;
-    }
-
-    .btn {
-        padding: 12px 28px;
-        font-size: 0.9rem;
-    }
-
-    /* ================= INFO BAR ================= */
-
-    .info-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-
-    .info-item::after {
-        display: none;
-    }
-
-    /* ================= EXPERIENCIAS ================= */
-
+    /* PRODUCTOS */
     .cards-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
@@ -1757,136 +1469,32 @@ h1, h2, h3 {
 
     .card {
         width: 100%;
-        max-width: 100%;
         height: 480px;
     }
 
-    /* ================= DESTINOS ================= */
-
-    .destinos-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-    }
-
-    .destino-card {
-        height: 240px;
-    }
-
-    /* ================= INSTRUCCIONES ================= */
-
-    .story-step {
-        gap: 20px;
-    }
-
-    .step-content {
-        padding: 25px;
-    }
-
-    .step-content h3 {
-        font-size: 1.4rem;
-    }
-
-    .step-content p {
-        font-size: 0.95rem;
-    }
-
-    /* ================= UBICACION ================= */
-
+    /* UBICACIÓN */
     .ubicacion-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
     }
 
-    .mapa-pro {
-        height: 280px;
-    }
-
-    /* ================= FORMULARIO ================= */
-
-    .form-row {
-        gap: 10px;
-    }
-
-    /* ================= FOOTER ================= */
-
+    /* FOOTER */
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
     }
 
 }
 
 
-/* ================= PANTALLAS VERTICALES GRANDES ================= */
+/* ================= DESKTOP GRANDE ================= */
 
-
-
-@media (min-width: 768px) and (orientation: portrait) {
-
-    /* ================= HERO ================= */
-    .hero {
-        min-height: 100vh;
-        padding-top: 120px;
-        padding-bottom: 60px;
-
-        align-items: flex-start;
-
-        background: 
-            linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.10)),
-            url("img/ImgHero-tablet.png") center/cover no-repeat;
-    }
+@media (min-width: 1400px) {
 
     .hero-content h2 {
-        font-size: 4rem;
-        margin-top: 550px;
+        font-size: 6rem;
     }
 
-    .hero-content p {
-        font-size: 1.1rem;
+    .container {
+        max-width: 1400px;
     }
 
-    /* ================= BOTONES */
-    .hero-buttons {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    /* =================INFO BAR ================= */
-    .info-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* ================= EXPERIENCIAS ================= */
-    .cards-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-
-    .card {
-        width: 100%;
-        max-width: 380px;
-    }
-
-    /* ================= DESTINOS ================= */
-    .destinos-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* ================= UBICACION ================= */
-    .ubicacion-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* ================= FOOTER ================= */
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
 }
