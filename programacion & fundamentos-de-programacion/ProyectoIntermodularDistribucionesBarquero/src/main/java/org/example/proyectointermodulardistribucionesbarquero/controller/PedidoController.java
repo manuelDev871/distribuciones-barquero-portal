@@ -85,9 +85,7 @@ public class PedidoController {
         );
     }
 
-    // =========================
-    // ➕ AÑADIR PRODUCTO
-    // =========================
+    // AÑADIR PRODUCTO
     @FXML
     private void anadirProducto() {
 
@@ -106,13 +104,13 @@ public class PedidoController {
                 return;
             }
 
-            // 🔥 CONTROL DE STOCK
+            // CONTROL DE STOCK
             if (cantidad > producto.getStock()) {
                 mostrarAlerta("No hay suficiente stock disponible");
                 return;
             }
 
-            // 🔥 EVITAR DUPLICADOS
+            // EVITAR DUPLICADOS
             for (DetallePedido dp : carrito) {
                 if (dp.getId_producto() == producto.getId_producto()) {
                     mostrarAlerta("Este producto ya está añadido");
@@ -140,9 +138,7 @@ public class PedidoController {
         }
     }
 
-    // =========================
-    // 🛒 CREAR PEDIDO
-    // =========================
+    // CREAR PEDIDO
     @FXML
     private void crearPedido() {
 
@@ -183,9 +179,7 @@ public class PedidoController {
         lblTotal.setText(String.format("%.2f €", total));
     }
 
-    // =========================
-    // 🔔 ALERTAS
-    // =========================
+    // ALERTAS
     private void mostrarAlerta(String mensaje) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Información");

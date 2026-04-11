@@ -20,7 +20,7 @@ public class PedidoDAO {
 
         try (Connection con = Conexion.conectar()) {
 
-            con.setAutoCommit(false); // 🔥 TRANSACCIÓN
+            con.setAutoCommit(false);
 
             // 🔹 INSERT PEDIDO
             PreparedStatement psPedido = con.prepareStatement(sqlPedido, Statement.RETURN_GENERATED_KEYS);
@@ -40,20 +40,20 @@ public class PedidoDAO {
 
             for (DetallePedido d : detalles) {
 
-                // 👉 INSERT DETALLE
+                // INSERT DETALLE
                 psDetalle.setInt(1, d.getCantidad());
                 psDetalle.setDouble(2, d.getPrecio_unitario());
                 psDetalle.setInt(3, idPedido);
                 psDetalle.setInt(4, d.getId_producto());
                 psDetalle.executeUpdate();
 
-                // 🔥 RESTAR STOCK
+                // RESTAR STOCK
                 psStock.setInt(1, d.getCantidad());
                 psStock.setInt(2, d.getId_producto());
                 psStock.executeUpdate();
             }
 
-            con.commit(); // ✅ TODO OK
+            con.commit();
 
         } catch (Exception e) {
             e.printStackTrace();

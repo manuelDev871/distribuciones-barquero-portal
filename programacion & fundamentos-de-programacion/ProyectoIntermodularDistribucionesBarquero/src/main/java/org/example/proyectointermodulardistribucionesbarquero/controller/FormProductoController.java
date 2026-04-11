@@ -38,7 +38,7 @@ public class FormProductoController {
             String precioTexto = txtPrecio.getText();
             String stockTexto = txtStock.getText();
 
-            // 🔥 VALIDACIONES
+            // VALIDACIONES
             if (nombre.isEmpty() || precioTexto.isEmpty() || stockTexto.isEmpty()) {
                 mostrarAlerta("Todos los campos son obligatorios");
                 return;

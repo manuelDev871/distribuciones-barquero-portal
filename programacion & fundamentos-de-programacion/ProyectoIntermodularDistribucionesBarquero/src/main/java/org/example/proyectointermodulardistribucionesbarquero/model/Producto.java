@@ -28,7 +28,6 @@ public class Producto {
     }
 
     // 🔹 GETTERS / SETTERS
-
     public int getId_producto() {
         return id_producto;
     }

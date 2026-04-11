@@ -36,9 +36,7 @@ public class MainController {
         mostrarClientes();
     }
 
-    // =========================
-    // 👤 CLIENTES
-    // =========================
+    // CLIENTES
     @FXML
     private void mostrarClientes() {
 
@@ -76,9 +74,7 @@ public class MainController {
         tablaClientes.getItems().addAll(lista);
     }
 
-    // =========================
-    // 📦 PRODUCTOS
-    // =========================
+    // PRODUCTOS
     @FXML
     private void mostrarProductos() {
 
@@ -87,11 +83,10 @@ public class MainController {
 
         tablaClientes.getItems().clear();
 
-        // 🔥 NUEVO ORDEN
         colNombre.setText("Nombre");
         colEmail.setText("Precio");
-        colTelefono.setText("Stock");        // antes proveedor
-        colDireccion.setText("Proveedor");   // antes categoría
+        colTelefono.setText("Stock");
+        colDireccion.setText("Proveedor");
 
         // Nombre
         colNombre.setCellValueFactory(data -> {
@@ -105,7 +100,7 @@ public class MainController {
             return new javafx.beans.property.SimpleStringProperty(String.valueOf(p.getPrecio()));
         });
 
-        // 🔥 STOCK (con color)
+        // Stock
         colTelefono.setCellValueFactory(data -> {
             Producto p = (Producto) data.getValue();
             return new javafx.beans.property.SimpleStringProperty(
@@ -135,7 +130,7 @@ public class MainController {
             }
         });
 
-        // 🔥 PROVEEDOR
+        // Proveedor
         colDireccion.setCellValueFactory(data -> {
             Producto p = (Producto) data.getValue();
             return new javafx.beans.property.SimpleStringProperty(
@@ -147,9 +142,7 @@ public class MainController {
         tablaClientes.getItems().addAll(lista);
     }
 
-    // =========================
-    // ➕ AÑADIR
-    // =========================
+    // AÑADIR
     @FXML
     private void anhadir() {
 
@@ -175,9 +168,7 @@ public class MainController {
         }
     }
 
-    // =========================
-    // ✏️ EDITAR
-    // =========================
+    // EDITAR
     @FXML
     private void editar() {
 
@@ -229,9 +220,7 @@ public class MainController {
         }
     }
 
-    // =========================
-    // 🗑 ELIMINAR
-    // =========================
+    // ELIMINAR
     @FXML
     private void eliminar() {
 
@@ -256,9 +245,7 @@ public class MainController {
         refrescar();
     }
 
-    // =========================
-    // 🔄 REFRESCAR
-    // =========================
+    // REFRESCAR
     private void refrescar() {
         if (modoActual.equals("clientes")) {
             mostrarClientes();

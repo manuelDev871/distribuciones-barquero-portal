@@ -30,14 +30,6 @@ El código está organizado en diferentes carpetas para facilitar su mantenimien
 
 ---
 
-## ⚙️ Funcionalidad actual
-Por el momento, el proyecto se encuentra en una fase inicial, por lo que:
-
-- Se ha preparado la base del sistema
-- Se ha organizado el entorno de desarrollo
-- No todas las funcionalidades finales están implementadas todavía
-
----
 
 ## ▶️ Ejecución
 Para ejecutar el proyecto:

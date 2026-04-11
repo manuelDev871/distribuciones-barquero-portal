@@ -11,6 +11,7 @@ import java.util.List;
 public class ProveedorDAO {
 
     public List<String> obtenerNombresProveedores() {
+
         List<String> lista = new ArrayList<>();
 
         String sql = "SELECT nombre FROM proveedores";

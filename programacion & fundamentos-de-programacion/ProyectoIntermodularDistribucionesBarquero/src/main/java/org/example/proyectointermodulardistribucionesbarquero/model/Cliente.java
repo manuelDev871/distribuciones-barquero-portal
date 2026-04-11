@@ -8,10 +8,8 @@ public class Cliente {
     private String telefono;
     private String direccion;
 
-    // Constructor vacío
     public Cliente() {}
 
-    // Constructor completo
     public Cliente(int id_cliente, String nombre, String email, String telefono, String direccion) {
         this.id_cliente = id_cliente;
         this.nombre = nombre;

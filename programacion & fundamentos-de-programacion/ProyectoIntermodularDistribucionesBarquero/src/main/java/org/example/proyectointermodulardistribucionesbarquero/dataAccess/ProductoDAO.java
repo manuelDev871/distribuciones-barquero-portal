@@ -36,7 +36,6 @@ public class ProductoDAO {
                         rs.getInt("id_proveedor")
                 );
 
-                // 🔥 AQUÍ SE ASIGNAN LOS NOMBRES
                 p.setNombreCategoria(rs.getString("categoria_nombre"));
                 p.setNombreProveedor(rs.getString("proveedor_nombre"));
 
